@@ -5,8 +5,12 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        return None
-    
+        dict = {}
+        for i in range(len(nums)):
+            x = nums[i]
+            if target-x in dict:
+                return [dict[target-x], i]
+            dict[x] = i
     
 # test cases
 print 'Test Case 1'
